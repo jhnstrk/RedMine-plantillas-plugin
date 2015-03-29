@@ -6,6 +6,9 @@
 :id => 'wiki_form'}  do |f| %>
 <%= error_messages_for 'content' %>
 
+<%# Preserve wiki page parent: %>
+<input name="parent" type="hidden" value="<%=params[:parent]%>">
+
 <div class="box tabular">
 <p><label for="issue_plantilla"><%= l(:label_choose_template) %></label>
 <select id="issue_plantilla" name="issue_plantilla">
